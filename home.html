@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speed Dial</title>
+    <!-- Link para a fonte Rubik via Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="icon/quadrados.png" type="image/png"/>
+  </head>
+  <body>
+    <!-- Seção de clima (fixada no canto superior esquerdo) -->
+    <div class="weather">
+      <p id="city">Carregando...</p>
+      <div class="weather-info">
+        <img id="weatherIcon" src="" alt="Ícone do clima" />
+        <span id="temperature"></span>
+      </div>
+    </div>
+
+    <!-- Cotação do dólar em tempo real (fixada no canto superior direito) -->
+    <div class="dollar-rate">
+      <span id="dollarValue">Carregando cotação...</span>
+    </div>
+
+    <!-- Container principal para a barra de pesquisa e a grade de ícones -->
+    <div class="main-content">
+      <!-- Barra de pesquisa -->
+      <div class="search-bar">
+        <img src="icon/google-logo.png" alt="Google Logo" class="search-logo" />
+        <input type="text" id="searchInput" placeholder="Pesquisar na Web" />
+        <img src="icon/search-icon.png" alt="Pesquisar" class="search-icon" id="searchIcon" />
+      </div>
+
+<!-- Grade de ícones com links para os sites correspondentes -->
+<div class="icon-grid">
+  <!-- Primeira fileira: 6 ícones originais -->
+  <div class="icon">
+    <a href="https://twitter.com">
+      <div class="icon-container">
+        <img src="banner/twitter.png" alt="Twitter" />
+      </div>
+      <p>Twitter</p>
+    </a>
+  </div>
+  <div class="icon">
+    <a href="https://www.youtube.com">
+      <div class="icon-container">
+        <img src="banner/youtube.png" alt="YouTube" />
+      </div>
+      <p>YouTube</p>
+    </a>
+  </div>
+  <div class="icon">
+    <a href="https://www.instagram.com">
+      <div class="icon-container">
+        <img src="banner/instagram.png" alt="Instagram" />
+      </div>
+      <p>Instagram</p>
+    </a>
+  </div>
+  <div class="icon">
+    <a href="https://www.globo.com">
+      <div class="icon-container">
+        <img src="banner/globo.png" alt="Globo.com" />
+      </div>
+      <p>Globo.com</p>
+    </a>
+  </div>
+  <div class="icon">
+    <a href="https://www.disneyplus.com">
+      <div class="icon-container">
+        <img src="banner/disney.png" alt="Disney⁺" />
+      </div>
+      <p>Disney⁺</p>
+    </a>
+  </div>
+  <div class="icon">
+    <a href="https://www.crunchyroll.com">
+      <div class="icon-container">
+        <img src="banner/crunchyroll.png" alt="Crunchyroll" />
+      </div>
+      <p>Crunchyroll</p>
+    </a>
+  </div>
+  
+  <!-- Segunda fileira: 6 ícones adicionais -->
+  <div class="icon">
+    <a href="https://www.primevideo.com"></a>
+      <div class="icon-container">
+      <img src="https://logo.clearbit.com/amazonprimevideo.com?size=144" alt="Prime Video" />
+      </div>
+      <p>Prime Video</p>
+    </a>
+  </div>
+  <div class="icon">
+    <a href="https://www.hbomax.com"></a>
+      <div class="icon-container">
+        <img src="banner/hbomax.png" alt="HBO Max" />
+      </div>
+      <p>HBO Max</p>
+    </a>
+  </div>
+  <div class="icon">
+    <a href="https://www.netflix.com"></a>
+      <div class="icon-container">
+        <img src="banner/netflix.png" alt="Netflix" />
+      </div>
+      <p>Netflix</p>
+    </a>
+  </div>
+  <div class="icon">
+    <a href="https://shopee.com.br"></a>
+      <div class="icon-container">
+        <img src="banner/shopee.png" alt="Shopee" />
+      </div>
+      <p>Shopee</p>
+    </a>
+  </div>
+  <div class="icon">
+    <a href="https://www.aliexpress.com"></a>
+      <div class="icon-container">
+        <img src="https://logo.clearbit.com/aliexpress.com?size=144" alt="AliExpress" />
+      </div>
+      <p>AliExpress</p>
+    </a>
+  </div>
+  <div class="icon">
+    <a href="https://www.amazon.com"></a>
+      <div class="icon-container">
+        <img src="https://logo.clearbit.com/amazon.com?size=144" alt="Amazon" />
+      </div>
+      <p>Amazon</p>
+    </a>
+  </div>
+  
+  <!-- Terceira fileira: 6 ícones adicionais -->
+  <div class="icon">
+    <a href="https://www.mercadolivre.com.br"></a>
+      <div class="icon-container">
+        <img src="https://logo.clearbit.com/mercadolivre.com?size=144" alt="Mercado Livre" />
+      </div>
+      <p>Mercado Livre</p>
+    </a>
+  </div>
+  <div class="icon">
+    <a href="https://www.sofascore.com"></a>
+      <div class="icon-container">
+        <img src="banner/sofascore.png" alt="Sofascore" />
+      </div>
+      <p>Sofascore</p>
+    </a>
+  </div>
+  <div class="icon">
+    <a href="https://kindleotaku.com"></a>
+      <div class="icon-container">
+        <img src="banner/kindleotaku.png" alt="Kindle Otaku" />
+      </div>
+      <p>Kindle Otaku</p>
+    </a>
+  </div>
+  <div class="icon">
+    <a href="https://www.moradabella.com.br"></a>
+      <div class="icon-container">
+        <img src="banner/moradabella.png" alt="Morada Bella" />
+      </div>
+      <p>Morada Bella</p>
+    </a>
+  </div>
+  <div class="icon">
+    <a href="https://www.reddit.com"></a>
+      <div class="icon-container">
+        <img src="banner/reddit.png" alt="Reddit" />
+      </div>
+      <p>Reddit</p>
+    </a>
+  </div>
+  <div class="icon">
+    <a href="https://www.snapchat.com"></a>
+      <div class="icon-container">
+        <img src="banner/snapchat.png" alt="Snapchat" />
+      </div>
+      <p>Snapchat</p>
+    </a>
+  </div>
+</div>
+
+      
+
+    <script src="script.js"></script>
+  </body>
+</html>

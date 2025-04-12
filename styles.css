@@ -1,0 +1,184 @@
+/* Estilos globais */
+body {
+  background-color: #000;       /* Fundo preto */
+  color: #fff;                  /* Texto branco */
+  font-family: 'Rubik', sans-serif;     /* Fonte alterada para Rubik */
+  margin: 0;
+  padding: 0;
+}
+
+/* Seção de clima fixa no canto superior esquerdo */
+.weather {
+  position: fixed;
+  top: 9px;
+  left: 5px;
+  width: 100px; /* Largura definida para melhor centralização dos conteúdos internos */
+  text-align: left; /* Centraliza os textos dentro da seção */
+}
+#city {
+  font-size: 0.9rem;
+  margin: 0 0 1px 9px;
+}
+#temperature {
+  font-size: 0.8rem;
+}
+
+/* Contêiner para ícone e temperatura */
+.weather-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.weather-info img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+/* Cotação do dólar fixa no canto superior direito */
+.dollar-rate {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Container principal para centralizar a barra de pesquisa e os ícones */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 65px; /* Espaço para não sobrepor a seção de clima */
+}
+
+/* Barra de pesquisa */
+.search-bar {
+  background-color: #fff;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  margin-bottom: 85px;
+  height: 50px;
+  transition: transform 0.15s ease-in-out; /* Transição mais suave */
+}
+.search-bar:hover {
+  transform: scale(1.05);
+}
+
+
+.search-bar .search-logo {
+  height: 30px;
+  margin-right: 10px;
+}
+.search-bar input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+}
+.search-bar .search-icon {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Grade de ícones organizada */
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 colunas para telas grandes */
+  gap: 20px;
+  width: 65%;
+  max-width: 1200px;
+  margin: 0 auto 200px;  /* Centraliza a grade e adiciona margem inferior */
+  text-align: center;
+}
+
+/* Estilo individual de cada ícone */
+.icon {
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  transition: transform 0.1s ease-in-out; /* Transição suave ao passar o mouse */
+}
+
+.icon:hover {
+  transform: scale(1.10); /* Aumenta o ícone ao passar o mouse */
+}
+
+/* Contêiner retangular para os ícones, com cantos arredondados */
+.icon .icon-container {
+  width: 145px;    /* Largura do contêiner */
+  height: 90px;    /* Altura do contêiner */
+  border-radius: 20px;
+  overflow: hidden; /* Garante que a imagem respeite os cantos arredondados */
+  margin: 0 auto 8px;  /* Centraliza e adiciona margem inferior */
+}
+
+/* A imagem ocupa toda a extensão do contêiner */
+.icon-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Texto abaixo de cada ícone */
+.icon p {
+  margin: 0;
+  font-size: 14px;
+}
+
+a {
+  color: #fff;           /* Define a cor branca para o texto do link */
+  text-decoration: none; /* Remove o sublinhado */
+}
+
+.icon-grid a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 1200px) {
+  .icon-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas em telas medianas */
+  }
+}
+
+@media (max-width: 768px) {
+  .icon-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas em tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .icon-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas em celulares */
+    gap: 10px;
+  }
+}
+
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+  .weather {
+    font-size: 1rem;
+  }
+  .search-bar {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .weather {
+    font-size: 0.9rem;
+    left: 10px;
+  }
+  .search-bar {
+    max-width: 100%;
+  }
+}
